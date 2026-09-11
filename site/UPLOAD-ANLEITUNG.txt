@@ -25,9 +25,10 @@ dass die Anzeige versteckter Dateien aktiviert ist.
 Alle offenen Stellen sind im Text mit eckigen Klammern gekennzeichnet und lassen
 sich per Suche nach der öffnenden Klammer finden.
 
-  a) Umsatzsteuer-Identifikationsnummer, Aufsichtsbehörde, Angaben zur Erlaubnis
-     nach § 34c GewO, berufsrechtliche Angaben und Verbraucherstreitbeilegung
-     Betrifft: /impressum/
+  a) Straße und Hausnummer des Gewerbe- und Ordnungsamts Monheim am Rhein
+     Betrifft: /impressum/, Abschnitt Erlaubnis und Aufsichtsbehörde.
+     USt-IdNr., Erlaubnis nach § 34c GewO, berufsrechtliche Regelungen und die
+     Angabe zur Verbraucherstreitbeilegung sind bereits eingetragen.
 
   b) Hosting-Anbieter, Speicherdauer der Logfiles und Stand der Erklärung
      Betrifft: /datenschutz/

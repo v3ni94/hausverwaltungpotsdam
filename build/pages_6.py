@@ -177,19 +177,29 @@ page("/impressum/", "Impressum | Hausverwaltung Müller GmbH",
 E-Mail: <a href="mailto:{MAIL}">{MAIL}</a></p>
 
 <h2>Umsatzsteuer-Identifikationsnummer</h2>
-<p>[USt-IdNr. ergänzen]</p>
+<p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE329163925</p>
 
-<h2>Aufsichtsbehörde und Erlaubnis</h2>
-<p>[Zuständige Aufsichtsbehörde und Angaben zur Erlaubnis nach § 34c GewO ergänzen,
-einschließlich der Bezeichnung der erteilenden Stelle.]</p>
+<h2>Erlaubnis und Aufsichtsbehörde</h2>
+<p>Die Hausverwaltung Müller GmbH ist Wohnimmobilienverwalterin im Sinne von
+§ 34c Abs. 1 Satz 1 Nr. 4 Gewerbeordnung und verfügt über die hierfür
+erforderliche Erlaubnis.</p>
+<p>Zuständige Aufsichtsbehörde:<br>
+Stadt Monheim am Rhein<br>
+Gewerbe- und Ordnungsamt<br>
+[Straße und Hausnummer der Behörde ergänzen]<br>
+40789 Monheim am Rhein</p>
 
-<h2>Berufsrechtliche Angaben</h2>
-<p>[Berufsbezeichnung, Staat der Verleihung und maßgebliche berufsrechtliche
-Regelungen ergänzen, soweit einschlägig.]</p>
+<h2>Berufsrechtliche Regelungen</h2>
+<p>Für die Tätigkeit gelten insbesondere § 34c Gewerbeordnung und die
+Makler- und Bauträgerverordnung (MaBV) sowie die Vorschriften des
+Wohnungseigentumsgesetzes. Die Regelungen sind unter
+<a href="https://www.gesetze-im-internet.de/" rel="noopener" target="_blank">www.gesetze-im-internet.de</a>
+abrufbar.</p>
 
 <h2>Verbraucherstreitbeilegung</h2>
-<p>[Angabe ergänzen, ob eine Bereitschaft oder Verpflichtung zur Teilnahme an einem
-Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle besteht.]</p>
+<p>Die Hausverwaltung Müller GmbH ist weder bereit noch verpflichtet, an
+Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle im Sinne des
+Verbraucherstreitbeilegungsgesetzes teilzunehmen.</p>
 
 <h2>Haftung für Inhalte</h2>
 <p>Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für die Richtigkeit,
@@ -206,11 +216,9 @@ Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar.</p>
 Urheberrecht. Die bereitgestellten Muster dürfen für eigene Zwecke heruntergeladen
 und angepasst werden.</p>
 
-<div class="hinweis"><strong>Hinweis für den Betrieb dieser Website:</strong> Die mit
-eckigen Klammern gekennzeichneten Angaben sind vor der Veröffentlichung zu ergänzen.
-Ein Impressum ohne die erforderlichen berufsrechtlichen Angaben genügt den
-gesetzlichen Anforderungen nicht. Die Vollständigkeit sollte anwaltlich geprüft
-werden.</div>
+<div class="hinweis"><strong>Hinweis für den Betrieb dieser Website:</strong> Die
+Anschrift der Aufsichtsbehörde ist noch zu ergänzen. Die Vollständigkeit des
+Impressums sollte vor der Veröffentlichung anwaltlich geprüft werden.</div>
 """,
  breadcrumb=[("/","Start"),("/impressum/","Impressum")], eyebrow="Rechtliches")
 print("teil 6 ok")
