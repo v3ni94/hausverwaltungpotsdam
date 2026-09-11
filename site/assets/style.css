@@ -1,0 +1,109 @@
+/* Hausverwaltung Müller GmbH, CI-Farben nach hvm-ci */
+:root{
+  --orange:#E6A83C; --anthrazit:#87888A; --mittelgrau:#9C9D9F;
+  --hellgrau:#D7D8DA; --umriss:#ECECEC; --schwarz:#1A1A1A;
+  --max:1080px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{overflow-wrap:break-word;hyphens:auto;margin:0;font-family:system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.65;color:var(--schwarz);background:#fff}
+.kennlinie{height:3px;display:flex}
+.kennlinie i{display:block;height:100%}
+.kennlinie i:nth-child(1){width:40%;background:var(--anthrazit)}
+.kennlinie i:nth-child(2){width:20%;background:var(--mittelgrau)}
+.kennlinie i:nth-child(3){width:7.5%;background:var(--orange)}
+.kennlinie i:nth-child(4){width:32.5%;background:var(--hellgrau)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+header.site{border-bottom:1px solid var(--hellgrau);background:#fff}
+.head{display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:14px 0;flex-wrap:wrap}
+.head img{width:150px;height:auto;display:block}
+nav.main ul{list-style:none;display:flex;gap:20px;margin:0;padding:0;flex-wrap:wrap}
+nav.main a{color:var(--schwarz);text-decoration:none;font-size:15px;
+  padding-bottom:3px;border-bottom:2px solid transparent}
+nav.main a:hover,nav.main a[aria-current="page"]{border-bottom-color:var(--orange)}
+
+.crumb{font-size:13px;color:var(--anthrazit);padding:14px 0 0}
+.crumb a{color:var(--anthrazit)}
+main{padding:8px 0 56px}
+h1,h2,h3{hyphens:auto;overflow-wrap:break-word}
+h1{font-size:2.05rem;line-height:1.2;margin:22px 0 10px}
+h1+.lead{font-size:1.1rem;color:#3a3a3a;margin:0 0 28px;max-width:70ch}
+h2{font-size:1.4rem;margin:40px 0 10px;padding-top:14px;border-top:1px solid var(--hellgrau)}
+h3{font-size:1.12rem;margin:26px 0 6px;color:#333}
+p,ul,ol{max-width:74ch}
+ul,ol{padding-left:22px}
+li{margin-bottom:5px}
+a{color:#8a6417}
+.bar{width:60px;height:4px;background:var(--orange);margin:0 0 22px}
+
+.cta{display:inline-block;background:var(--orange);color:#fff;text-decoration:none;
+  font-weight:600;padding:13px 24px;border-radius:3px;margin:8px 0}
+.cta:hover{background:#d09a31}
+.cta.ghost{background:#fff;color:var(--schwarz);border:1.5px solid var(--hellgrau)}
+.cta.ghost:hover{border-color:var(--orange);background:#fff}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;margin:26px 0;max-width:none}
+.card{border:1px solid var(--hellgrau);border-top:3px solid var(--orange);
+  padding:20px 22px;background:#fff}
+.card h3{margin:0 0 8px;font-size:1.08rem}
+.card p{font-size:15px;margin:0 0 12px;max-width:none}
+.card a{font-size:15px;font-weight:600;text-decoration:none}
+
+.box{border:1px solid var(--hellgrau);background:#FAFAFA;padding:18px 22px;margin:26px 0}
+.box p:last-child{margin-bottom:0}
+.hinweis{border-left:3px solid var(--orange);background:#FAFAFA;padding:14px 18px;
+  font-size:15px;color:#444;margin:24px 0}
+.hinweis strong{color:var(--schwarz)}
+
+table{border-collapse:collapse;width:100%;font-size:15px;margin:22px 0}
+th{background:var(--orange);color:#fff;text-align:left;padding:9px 11px;font-size:14px}
+td{padding:9px 11px;border-bottom:1px solid var(--hellgrau);vertical-align:top}
+tr:nth-child(even) td{background:#FAFAFA}
+.scroll{overflow-x:auto;margin:22px 0}
+.scroll table{margin:0;min-width:560px}
+
+.faq{border-bottom:1px solid var(--hellgrau);padding:16px 0}
+.faq h3{margin:0 0 6px;font-size:1.02rem}
+.faq p{margin:0;font-size:16px}
+
+.dl{display:flex;align-items:flex-start;gap:16px;border:1px solid var(--hellgrau);
+  padding:18px 20px;margin:16px 0}
+.dl .ico{flex:0 0 auto;width:38px;height:38px;background:var(--orange);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;
+  border-radius:2px}
+.dl div{flex:1}
+.dl h3{margin:0 0 4px;font-size:1.02rem}
+.dl p{margin:0 0 8px;font-size:15px}
+
+form label{display:block;font-size:15px;font-weight:600;margin:18px 0 5px}
+form input,form textarea,form select{width:100%;max-width:520px;font:inherit;font-size:16px;
+  padding:10px 12px;border:1px solid var(--mittelgrau);border-radius:2px;background:#fff}
+form textarea{min-height:150px}
+form .check{font-weight:400;font-size:14px;display:flex;gap:9px;align-items:flex-start;
+  max-width:520px;margin-top:20px}
+form .check input{width:auto;margin-top:4px}
+
+footer.site{border-top:1px solid var(--hellgrau);background:#FAFAFA;
+  font-size:14px;color:#4a4a4a}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:28px;padding:34px 0 26px}
+.fgrid h4{margin:0 0 10px;font-size:14px;color:var(--anthrazit);
+  text-transform:uppercase;letter-spacing:.5px}
+.fgrid ul{list-style:none;padding:0;margin:0}
+.fgrid li{margin-bottom:6px}
+.fgrid a{color:#4a4a4a;text-decoration:none}
+.fgrid a:hover{text-decoration:underline}
+.legal{border-top:1px solid var(--hellgrau);padding:16px 0 30px;font-size:13px;
+  color:var(--anthrazit);text-align:center}
+@media(max-width:640px){
+  body{font-size:16px}
+  h1{font-size:1.65rem}
+  h2{font-size:1.25rem}
+  .head{gap:12px}
+  .head img{width:124px}
+  nav.main ul{gap:14px}
+}

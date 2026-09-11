@@ -1,0 +1,115 @@
+WEBSITE HAUSVERWALTUNGPOTSDAM.DE
+Hausverwaltung Müller GmbH, Stand 11.09.2026
+
+
+1. HOCHLADEN
+
+Den gesamten Inhalt dieses Ordners in das Web-Wurzelverzeichnis Ihres Hostings
+kopieren, üblicherweise htdocs, public_html oder www. Die Datei index.html muss
+direkt im Wurzelverzeichnis liegen, nicht in einem Unterordner.
+
+Die Domain hausverwaltungpotsdam.de wird dann auf dieses Verzeichnis gerichtet.
+Weitere Einstellungen sind für die Anzeige nicht erforderlich. Es werden keine
+Datenbank, kein PHP und keine Buildschritte benötigt.
+
+Die Datei .htaccess beginnt mit einem Punkt und wird von manchen FTP-Programmen
+ausgeblendet. Bitte prüfen, dass sie mit übertragen wurde, und darauf achten,
+dass die Anzeige versteckter Dateien aktiviert ist.
+
+
+2. VOR DER VERÖFFENTLICHUNG ZU ERGÄNZEN
+
+Alle offenen Stellen sind im Text mit eckigen Klammern gekennzeichnet und lassen
+sich per Suche nach der öffnenden Klammer finden.
+
+  a) Telefonnummer und E-Mail-Adresse
+     Betrifft: Fußzeile jeder Seite, /kontakt/, /impressum/, /datenschutz/
+
+  b) Umsatzsteuer-Identifikationsnummer, Aufsichtsbehörde, Angaben zur Erlaubnis
+     nach § 34c GewO, berufsrechtliche Angaben und Verbraucherstreitbeilegung
+     Betrifft: /impressum/
+
+  c) Hosting-Anbieter, Speicherdauer der Logfiles und Stand der Erklärung
+     Betrifft: /datenschutz/
+
+  d) Endpunkt des Kontaktformulars
+     Betrifft: /kontakt/, Attribut action im Formular. Ohne gültigen Endpunkt
+     wird keine Anfrage versendet. Möglich sind ein Formulardienst oder ein
+     eigenes Skript des Hosters. Alternativ das Formular entfernen und nur
+     Telefon und E-Mail anbieten.
+
+Impressum und Datenschutzerklärung sind Entwürfe. Beide sollten vor der
+Veröffentlichung rechtlich geprüft werden. Ein unvollständiges Impressum ist
+angreifbar.
+
+
+3. HTTPS UND WEITERLEITUNGEN
+
+Die Datei .htaccess erzwingt HTTPS und leitet von www auf die Domain ohne www
+weiter. Diese beiden Regeln erst aktiv lassen, wenn für die Domain ein gültiges
+Zertifikat eingerichtet ist. Andernfalls die betreffenden RewriteCond- und
+RewriteRule-Zeilen vorübergehend mit einer Raute auskommentieren.
+
+
+4. NACH DEM HOCHLADEN
+
+  1. Startseite und alle Menüpunkte im Browser aufrufen.
+  2. Die drei PDF-Downloads unter /vorlagen/ testen.
+  3. Eine nicht existierende Adresse aufrufen, es muss 404.html erscheinen.
+  4. Darstellung auf dem Mobiltelefon prüfen.
+  5. Domain in der Google Search Console anlegen und bestätigen.
+  6. Dort die Sitemap einreichen:
+     https://hausverwaltungpotsdam.de/sitemap.xml
+  7. Mit der URL-Prüfung der Search Console die Indexierbarkeit der Startseite
+     kontrollieren.
+  8. Structured Data mit dem Rich Results Test von Google prüfen.
+
+
+5. AUFBAU
+
+  index.html                                Startseite
+  weg-verwaltung-potsdam/                   Leistungsseite WEG-Verwaltung
+  mietverwaltung-potsdam/                   Leistungsseite Mietverwaltung
+  sondereigentumsverwaltung-potsdam/        Leistungsseite Sondereigentum
+  ratgeber/                                 Übersicht Ratgeber
+  ratgeber/hausverwaltung-weg-kuendigen/    Abberufung und Vertrag
+  ratgeber/verwalterwechsel-weg/            Ablauf des Wechsels
+  ratgeber/was-darf-eine-hausverwaltung/    Befugnisse und Vertretung
+  ratgeber/zertifizierter-verwalter/        Qualifikation und Nachweise
+  vorlagen/                                 Downloads mit drei PDF-Mustern
+  kontakt/                                  Anfrageformular
+  impressum/                                Impressum, Entwurf
+  datenschutz/                              Datenschutzerklärung, Entwurf
+  404.html                                  Fehlerseite
+  robots.txt                                Anweisungen für Suchmaschinen
+  sitemap.xml                               Seitenverzeichnis, 13 Adressen
+  assets/                                   Stylesheet, Logo, Favicon
+  .htaccess                                 Serverregeln für Apache
+
+
+6. TEXTE ÄNDERN
+
+Die Seiten sind einfaches HTML und lassen sich in jedem Texteditor bearbeiten.
+Das Aussehen ist vollständig in assets/style.css geregelt, die CI-Farben stehen
+dort am Anfang als Variablen. Wird eine Seite ergänzt oder entfernt, ist
+sitemap.xml entsprechend anzupassen.
+
+
+7. HINWEIS ZUM STANDORT
+
+Als Sitz der Gesellschaft ist durchgehend Rheinpromenade 13, 40789 Monheim am
+Rhein angegeben, da dies die verbindliche Anschrift ist. Ein Büro in Potsdam
+wird nicht behauptet. Sollte ein Standort in Potsdam bestehen oder eingerichtet
+werden, können Impressum, Fußzeile und Kontaktseite ergänzt und zusätzlich
+strukturierte Daten vom Typ LocalBusiness eingebunden werden. Für einen
+Eintrag in Google Unternehmensprofil ist eine überprüfbare Adresse oder ein
+definiertes Einsatzgebiet erforderlich.
+
+
+8. RECHTLICHER HINWEIS
+
+Die Fachbeiträge sind eine allgemeine Information und keine Rechtsberatung. Die
+genannten Vorschriften sind vor einer Entscheidung im Einzelfall auf ihren
+aktuellen Stand zu prüfen. Die Beiträge zum Energierecht, insbesondere zur
+Fernablesung und zur Heizungsprüfung, sollten vor einer Veröffentlichung
+weiterer Inhalte am Gesetzestext abgeglichen werden.
