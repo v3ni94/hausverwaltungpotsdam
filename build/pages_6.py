@@ -11,7 +11,7 @@ page("/kontakt/", "Kontakt und Anfrage | Hausverwaltung Müller GmbH",
  "Beschreiben Sie kurz Ihr Objekt und Ihr Anliegen. Wir melden uns mit den "
  "Angaben, die wir für ein belastbares Angebot benötigen.",
  f"""
-<div class="cards">
+<div class="cards kontaktgrid">
 <div class="card"><h3>Anschrift</h3>
 <p>{FIRMA}<br>{STRASSE}<br>{PLZORT}</p></div>
 <div class="card"><h3>Telefon</h3><p>{TEL}</p></div>
@@ -64,7 +64,7 @@ ein.</span></label>
 </ul>
 {RECHT}
 """,
- breadcrumb=[("/","Start"),("/kontakt/","Kontakt")])
+ breadcrumb=[("/","Start"),("/kontakt/","Kontakt")], eyebrow="Kontakt")
 
 # ---------------------------------------------------------------- Impressum
 page("/impressum/", "Impressum | Hausverwaltung Müller GmbH",
@@ -119,5 +119,5 @@ Ein Impressum ohne vollständige Kontaktangaben und ohne die erforderlichen
 berufsrechtlichen Angaben genügt den gesetzlichen Anforderungen nicht. Die
 Vollständigkeit sollte anwaltlich geprüft werden.</div>
 """,
- breadcrumb=[("/","Start"),("/impressum/","Impressum")])
+ breadcrumb=[("/","Start"),("/impressum/","Impressum")], eyebrow="Rechtliches")
 print("teil 6 ok")

@@ -8,10 +8,12 @@
 <link rel="canonical" href="https://hausverwaltungpotsdam.de/kontakt/">
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="stylesheet" href="/assets/style.css">
+<meta name="theme-color" content="#E6A83C">
 <meta property="og:title" content="Kontakt und Anfrage | Hausverwaltung Müller GmbH">
 <meta property="og:description" content="Anfrage an die Hausverwaltung Müller GmbH zu WEG-Verwaltung, Mietverwaltung oder Sondereigentumsverwaltung in Potsdam.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hausverwaltungpotsdam.de/kontakt/">
+<meta property="og:image" content="https://hausverwaltungpotsdam.de/assets/logo-hvm.jpg">
 <meta property="og:locale" content="de_DE">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://hausverwaltungpotsdam.de/#organization", "name": "Hausverwaltung Müller GmbH", "legalName": "Hausverwaltung Müller GmbH", "url": "https://hausverwaltungpotsdam.de/", "logo": "https://hausverwaltungpotsdam.de/assets/logo-hvm.jpg", "address": {"@type": "PostalAddress", "streetAddress": "Rheinpromenade 13", "postalCode": "40789", "addressLocality": "Monheim am Rhein", "addressCountry": "DE"}, "areaServed": [{"@type": "City", "name": "Potsdam"}, {"@type": "State", "name": "Brandenburg"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Start", "item": "https://hausverwaltungpotsdam.de/"}, {"@type": "ListItem", "position": 2, "name": "Kontakt", "item": "https://hausverwaltungpotsdam.de/kontakt/"}]}</script>
@@ -19,8 +21,10 @@
 <body>
 <div class="kennlinie"><i></i><i></i><i></i><i></i></div>
 <header class="site"><div class="wrap head">
-<a href="/"><img src="/assets/logo-hvm.jpg" alt="Hausverwaltung Müller GmbH" width="150" height="130"></a>
-<nav class="main" aria-label="Hauptnavigation"><ul>
+<a class="marke" href="/"><img src="/assets/logo-hvm.png" alt="Hausverwaltung Müller GmbH" width="132" height="114"></a>
+<button class="navtoggle" type="button" aria-expanded="false" aria-controls="hauptmenue"
+  aria-label="Menü öffnen"><span></span></button>
+<nav class="main" id="hauptmenue" aria-label="Hauptnavigation"><ul>
 <li><a href="/">Start</a></li>
 <li><a href="/weg-verwaltung-potsdam/">WEG-Verwaltung</a></li>
 <li><a href="/mietverwaltung-potsdam/">Mietverwaltung</a></li>
@@ -31,19 +35,23 @@
 </ul></nav>
 </div></header>
 <div class="wrap crumb"><a href="/">Start</a> &rsaquo; <span>Kontakt</span></div>
-<main><div class="wrap">
+<main>
+<div class="hero"><svg class="haus" viewBox="0 0 240 170" fill="none" aria-hidden="true">
+<path d="M20 165V78L120 12l100 66v87" stroke="currentColor" stroke-width="9"
+ stroke-linejoin="round"/></svg>
+<div class="wrap inner">
+<p class="eyebrow">Kontakt</p>
 <h1>Kontakt und Anfrage</h1>
-<div class="bar"></div>
 <p class="lead">Beschreiben Sie kurz Ihr Objekt und Ihr Anliegen. Wir melden uns mit den Angaben, die wir für ein belastbares Angebot benötigen.</p>
 
-<div class="cards">
+</div></div>
+<section><div class="wrap"><div class="cards kontaktgrid">
 <div class="card"><h3>Anschrift</h3>
 <p>Hausverwaltung Müller GmbH<br>Rheinpromenade 13<br>40789 Monheim am Rhein</p></div>
 <div class="card"><h3>Telefon</h3><p>[Telefonnummer ergänzen]</p></div>
 <div class="card"><h3>E-Mail</h3><p>[E-Mail-Adresse ergänzen]</p></div>
-</div>
-
-<h2>Anfrage senden</h2>
+</div></div></section>
+<section class="band"><div class="wrap"><h2 id="anfrage-senden">Anfrage senden</h2>
 <!-- Hinweis für den Betreiber: action mit dem Endpunkt des Formulardienstes oder
      des eigenen Mailskripts belegen. Ohne gültige action wird nichts versendet. -->
 <form method="post" action="[Formular-Endpunkt ergänzen]">
@@ -76,9 +84,8 @@ genommen und willige in die Verarbeitung meiner Angaben zur Bearbeitung der Anfr
 ein.</span></label>
 
 <p style="margin-top:22px"><button class="cta" type="submit">Anfrage senden</button></p>
-</form>
-
-<h2>Was wir für ein Angebot benötigen</h2>
+</form></div></section>
+<section><div class="wrap"><h2 id="was-wir-fuer-ein-angebot-benoetigen">Was wir für ein Angebot benötigen</h2>
 <ul>
 <li>Art der Verwaltung: WEG, Miete oder Sondereigentum,</li>
 <li>Lage, Baujahr und Größe des Objekts sowie Anzahl der Einheiten,</li>
@@ -87,14 +94,20 @@ ein.</span></label>
 <li>laufende Streit-, Gewährleistungs- oder Versicherungsfälle,</li>
 <li>gewünschter Übernahmezeitpunkt.</li>
 </ul>
-<div class="hinweis"><strong>Hinweis:</strong> Die Angaben auf dieser Seite sind eine allgemeine Information und keine Rechtsberatung. Der Stand der genannten Vorschriften ist vor einer Entscheidung zu prüfen. Bei streitigen oder haftungsrelevanten Fragen empfehlen wir die Einschaltung eines Rechtsanwalts oder Fachanwalts für Wohnungseigentumsrecht.</div>
+<div class="hinweis"><strong>Hinweis:</strong> Die Angaben auf dieser Seite sind eine allgemeine Information und keine Rechtsberatung. Der Stand der genannten Vorschriften ist vor einer Entscheidung zu prüfen. Bei streitigen oder haftungsrelevanten Fragen empfehlen wir die Einschaltung eines Rechtsanwalts oder Fachanwalts für Wohnungseigentumsrecht.</div></div></section>
 
-</div></main>
+</main>
 <footer class="site"><div class="wrap">
 <div class="fgrid">
+<div>
+<p class="wortmarke"><span>HV</span><b>M</b></p>
+<p class="marke-zeile">Hausverwaltung Müller GmbH</p>
+<p class="claim">Immobilienverwaltung für Eigentümergemeinschaften und Vermieter
+in Potsdam und Brandenburg.</p>
+</div>
 <div><h4>Leistungen</h4><ul>
-<li><a href="/weg-verwaltung-potsdam/">WEG-Verwaltung Potsdam</a></li>
-<li><a href="/mietverwaltung-potsdam/">Mietverwaltung Potsdam</a></li>
+<li><a href="/weg-verwaltung-potsdam/">WEG-Verwaltung</a></li>
+<li><a href="/mietverwaltung-potsdam/">Mietverwaltung</a></li>
 <li><a href="/sondereigentumsverwaltung-potsdam/">Sondereigentumsverwaltung</a></li>
 </ul></div>
 <div><h4>Ratgeber</h4><ul>
@@ -102,9 +115,7 @@ ein.</span></label>
 <li><a href="/ratgeber/verwalterwechsel-weg/">Verwalterwechsel</a></li>
 <li><a href="/ratgeber/was-darf-eine-hausverwaltung/">Was darf eine Hausverwaltung?</a></li>
 <li><a href="/ratgeber/zertifizierter-verwalter/">Zertifizierter Verwalter</a></li>
-</ul></div>
-<div><h4>Vorlagen</h4><ul>
-<li><a href="/vorlagen/">Muster und Downloads</a></li>
+<li><a href="/vorlagen/">Muster und Vorlagen</a></li>
 </ul></div>
 <div><h4>Kontakt</h4><ul>
 <li>Hausverwaltung Müller GmbH</li><li>Rheinpromenade 13</li><li>40789 Monheim am Rhein</li>
@@ -112,10 +123,24 @@ ein.</span></label>
 </ul></div>
 </div>
 <div class="legal">
-Hausverwaltung Müller GmbH | Rheinpromenade 13 | 40789 Monheim am Rhein<br>
-Amtsgericht Düsseldorf, HRB 104762 | Geschäftsführer: Timo Müller |
-<a href="/impressum/">Impressum</a> | <a href="/datenschutz/">Datenschutz</a>
+<div>Hausverwaltung Müller GmbH | Amtsgericht Düsseldorf, HRB 104762 | Geschäftsführer: Timo Müller</div>
+<div class="rechts"><a href="/impressum/">Impressum</a>
+<a href="/datenschutz/">Datenschutz</a></div>
 </div>
 </div></footer>
+<script>
+(function(){
+  var b=document.querySelector('.navtoggle'), n=document.getElementById('hauptmenue'),
+      h=document.querySelector('header.site');
+  if(b&&n){b.addEventListener('click',function(){
+    var o=b.getAttribute('aria-expanded')==='true';
+    b.setAttribute('aria-expanded',String(!o));
+    b.setAttribute('aria-label',o?'Menü öffnen':'Menü schließen');
+    n.classList.toggle('offen',!o);
+  });}
+  if(h){var f=function(){h.classList.toggle('fixiert',window.scrollY>8);};
+    f();window.addEventListener('scroll',f,{passive:true});}
+})();
+</script>
 </body>
 </html>

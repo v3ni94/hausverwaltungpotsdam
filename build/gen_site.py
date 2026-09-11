@@ -36,7 +36,34 @@ def faq_ld(pairs):
 def faq_html(pairs):
     return "\n".join(f'<div class="faq"><h3>{q}</h3><p>{a}</p></div>' for q,a in pairs)
 
-def page(path, title, desc, h1, lead, body, breadcrumb=None, faq=None, extra_ld=None):
+
+import re as _re
+def sektionen(body):
+    """Zerlegt den Fließtext an den H2-Überschriften in Abschnitte und legt
+    abwechselnd ein Flächenband darunter."""
+    def _slug(t):
+        t = _re.sub(r"<[^>]+>", "", t).lower()
+        for a, b in (("ä","ae"),("ö","oe"),("ü","ue"),("ß","ss")):
+            t = t.replace(a, b)
+        t = _re.sub(r"[^a-z0-9]+", "-", t).strip("-")
+        return t
+
+    body = _re.sub(r"<h2>(.*?)</h2>",
+                   lambda m: '<h2 id="%s">%s</h2>' % (_slug(m.group(1)), m.group(1)),
+                   body)
+    teile = _re.split(r"(?=\n<h2)", body.strip())
+    out, band = [], False
+    for i, t in enumerate(teile):
+        t = t.strip()
+        if not t:
+            continue
+        cls = ' class="band"' if band else ""
+        out.append('<section%s><div class="wrap">%s</div></section>' % (cls, t))
+        band = not band
+    return "\n".join(out)
+
+def page(path, title, desc, h1, lead, body, breadcrumb=None, faq=None,
+         extra_ld=None, eyebrow=None, aktionen=None, schluss=None):
     url = DOMAIN + path
     cur = ' aria-current="page"'
     nav = "\n".join(
@@ -45,15 +72,31 @@ def page(path, title, desc, h1, lead, body, breadcrumb=None, faq=None, extra_ld=
     crumb = ""
     if breadcrumb:
         parts = " &rsaquo; ".join(
-            (f'<a href="{u}">{n}</a>' if u!=path else f"<span>{n}</span>")
-            for u,n in breadcrumb)
-        crumb = f'<div class="wrap crumb">{parts}</div>'
+            ('<a href="%s">%s</a>' % (u, n)) if u != path else ("<span>%s</span>" % n)
+            for u, n in breadcrumb)
+        crumb = '<div class="wrap crumb">%s</div>' % parts
     lds = [ORG]
     if breadcrumb: lds.append(crumbs(breadcrumb))
     if faq: lds.append(faq_ld(faq))
     if extra_ld: lds.append(extra_ld)
     ldtags = "\n".join('<script type="application/ld+json">%s</script>'
                        % json.dumps(l, ensure_ascii=False) for l in lds)
+
+    eb = '<p class="eyebrow">%s</p>' % eyebrow if eyebrow else ""
+    ld_html = '<p class="lead">%s</p>' % lead if lead else ""
+    akt = ""
+    if aktionen:
+        akt = '<div class="aktionen">%s</div>' % "".join(
+            '<a class="cta%s" href="%s">%s</a>' % (" ghost" if g else "", u, t)
+            for t, u, g in aktionen)
+    schluss_html = ""
+    if schluss:
+        st, sp, sb, su = schluss
+        schluss_html = f'''<section class="schluss"><div class="wrap inner">
+<div><h2>{st}</h2><p>{sp}</p></div>
+<div><a class="cta ghost" href="{su}">{sb}</a></div>
+</div></section>'''
+
     doc = f"""<!doctype html>
 <html lang="de">
 <head>
@@ -64,33 +107,50 @@ def page(path, title, desc, h1, lead, body, breadcrumb=None, faq=None, extra_ld=
 <link rel="canonical" href="{url}">
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="stylesheet" href="/assets/style.css">
+<meta name="theme-color" content="#E6A83C">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{url}">
+<meta property="og:image" content="{DOMAIN}/assets/logo-hvm.jpg">
 <meta property="og:locale" content="de_DE">
 {ldtags}
 </head>
 <body>
 <div class="kennlinie"><i></i><i></i><i></i><i></i></div>
 <header class="site"><div class="wrap head">
-<a href="/"><img src="/assets/logo-hvm.jpg" alt="{FIRMA}" width="150" height="130"></a>
-<nav class="main" aria-label="Hauptnavigation"><ul>
+<a class="marke" href="/"><img src="/assets/logo-hvm.png" alt="{FIRMA}" width="132" height="114"></a>
+<button class="navtoggle" type="button" aria-expanded="false" aria-controls="hauptmenue"
+  aria-label="Menü öffnen"><span></span></button>
+<nav class="main" id="hauptmenue" aria-label="Hauptnavigation"><ul>
 {nav}
 </ul></nav>
 </div></header>
 {crumb}
-<main><div class="wrap">
+<main>
+<div class="hero"><svg class="haus" viewBox="0 0 240 170" fill="none" aria-hidden="true">
+<path d="M20 165V78L120 12l100 66v87" stroke="currentColor" stroke-width="9"
+ stroke-linejoin="round"/></svg>
+<div class="wrap inner">
+{eb}
 <h1>{h1}</h1>
-<div class="bar"></div>
-{f'<p class="lead">{lead}</p>' if lead else ''}
-{body}
-</div></main>
+{ld_html}
+{akt}
+</div></div>
+{sektionen(body)}
+{schluss_html}
+</main>
 <footer class="site"><div class="wrap">
 <div class="fgrid">
+<div>
+<p class="wortmarke"><span>HV</span><b>M</b></p>
+<p class="marke-zeile">Hausverwaltung Müller GmbH</p>
+<p class="claim">Immobilienverwaltung für Eigentümergemeinschaften und Vermieter
+in Potsdam und Brandenburg.</p>
+</div>
 <div><h4>Leistungen</h4><ul>
-<li><a href="/weg-verwaltung-potsdam/">WEG-Verwaltung Potsdam</a></li>
-<li><a href="/mietverwaltung-potsdam/">Mietverwaltung Potsdam</a></li>
+<li><a href="/weg-verwaltung-potsdam/">WEG-Verwaltung</a></li>
+<li><a href="/mietverwaltung-potsdam/">Mietverwaltung</a></li>
 <li><a href="/sondereigentumsverwaltung-potsdam/">Sondereigentumsverwaltung</a></li>
 </ul></div>
 <div><h4>Ratgeber</h4><ul>
@@ -98,9 +158,7 @@ def page(path, title, desc, h1, lead, body, breadcrumb=None, faq=None, extra_ld=
 <li><a href="/ratgeber/verwalterwechsel-weg/">Verwalterwechsel</a></li>
 <li><a href="/ratgeber/was-darf-eine-hausverwaltung/">Was darf eine Hausverwaltung?</a></li>
 <li><a href="/ratgeber/zertifizierter-verwalter/">Zertifizierter Verwalter</a></li>
-</ul></div>
-<div><h4>Vorlagen</h4><ul>
-<li><a href="/vorlagen/">Muster und Downloads</a></li>
+<li><a href="/vorlagen/">Muster und Vorlagen</a></li>
 </ul></div>
 <div><h4>Kontakt</h4><ul>
 <li>{FIRMA}</li><li>{STRASSE}</li><li>{PLZORT}</li>
@@ -108,11 +166,25 @@ def page(path, title, desc, h1, lead, body, breadcrumb=None, faq=None, extra_ld=
 </ul></div>
 </div>
 <div class="legal">
-{FIRMA} | {STRASSE} | {PLZORT}<br>
-Amtsgericht Düsseldorf, HRB 104762 | Geschäftsführer: Timo Müller |
-<a href="/impressum/">Impressum</a> | <a href="/datenschutz/">Datenschutz</a>
+<div>{FIRMA} | Amtsgericht Düsseldorf, HRB 104762 | Geschäftsführer: Timo Müller</div>
+<div class="rechts"><a href="/impressum/">Impressum</a>
+<a href="/datenschutz/">Datenschutz</a></div>
 </div>
 </div></footer>
+<script>
+(function(){{
+  var b=document.querySelector('.navtoggle'), n=document.getElementById('hauptmenue'),
+      h=document.querySelector('header.site');
+  if(b&&n){{b.addEventListener('click',function(){{
+    var o=b.getAttribute('aria-expanded')==='true';
+    b.setAttribute('aria-expanded',String(!o));
+    b.setAttribute('aria-label',o?'Menü öffnen':'Menü schließen');
+    n.classList.toggle('offen',!o);
+  }});}}
+  if(h){{var f=function(){{h.classList.toggle('fixiert',window.scrollY>8);}};
+    f();window.addEventListener('scroll',f,{{passive:true}});}}
+}})();
+</script>
 </body>
 </html>
 """

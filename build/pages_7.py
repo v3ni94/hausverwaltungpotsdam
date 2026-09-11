@@ -74,7 +74,7 @@ wir Ihre Anfrage jedoch nicht bearbeiten.</p>
 <h2>9. Stand</h2>
 <p>Stand dieser Erklärung: [Datum ergänzen]</p>
 """,
- breadcrumb=[("/","Start"),("/datenschutz/","Datenschutz")])
+ breadcrumb=[("/","Start"),("/datenschutz/","Datenschutz")], eyebrow="Rechtliches")
 
 # 404
 page("/404", "Seite nicht gefunden | Hausverwaltung Müller GmbH",

@@ -32,8 +32,6 @@ Wartungstermine, Abrechnungsfristen und Mieterwechsel müssen ohne Lücken
 zusammenlaufen. Fehlt die Struktur, entstehen Ausfälle, verspätete Abrechnungen und
 vermeidbare Konflikte.</p>
 
-{CTA_MIET}
-
 <h2>Leistungsbereiche in der Mietverwaltung</h2>
 <ul>
 <li>Ansprechpartner für Mieter und Abstimmung mit dem Eigentümer,</li>
@@ -74,7 +72,12 @@ Rückständen oder Streitfällen.</p>
 {RECHT}
 """,
  breadcrumb=[("/","Start"),("/mietverwaltung-potsdam/","Mietverwaltung Potsdam")],
- faq=faq_miet)
+ faq=faq_miet, eyebrow="Leistung",
+ aktionen=[("Angebot anfragen","/kontakt/?anliegen=miete",False)],
+ schluss=("Mietverwaltung für Ihr Objekt",
+  "Nennen Sie uns Lage, Größe, Einheitenzahl und bestehende Verträge. Auf dieser "
+  "Grundlage stimmen wir den Leistungsumfang mit Ihnen ab.",
+  "Erstgespräch vereinbaren","/kontakt/?anliegen=miete"))
 
 # ---------------------------------------------------------------- SEV
 faq_sev = [
@@ -104,8 +107,6 @@ page("/sondereigentumsverwaltung-potsdam/",
 getrennte Ebenen: das gemeinschaftliche Eigentum, das die WEG-Verwaltung betreut,
 und die eigene vermietete Einheit. Für die zweite Ebene ist die
 Sondereigentumsverwaltung, kurz SEV, zuständig.</p>
-
-{CTA_SEV}
 
 <h2>SEV und WEG-Verwaltung im Vergleich</h2>
 <div class="scroll"><table>
@@ -145,5 +146,11 @@ möglichen Leistungsumfang.</p>
 {RECHT}
 """,
  breadcrumb=[("/","Start"),("/sondereigentumsverwaltung-potsdam/","Sondereigentumsverwaltung Potsdam")],
- faq=faq_sev)
+ faq=faq_sev, eyebrow="Leistung",
+ aktionen=[("SEV anfragen","/kontakt/?anliegen=sev",False),
+           ("Unterschied zur WEG-Verwaltung","#sev-und-weg-verwaltung-im-vergleich",True)],
+ schluss=("Verwaltung für Ihre Einheit",
+  "Teilen Sie uns Objekt, Lage, Größe und den aktuellen Mietstatus mit. Wir nennen "
+  "Ihnen den möglichen Leistungsumfang.",
+  "Anfrage stellen","/kontakt/?anliegen=sev"))
 print("teil 2 ok")

@@ -15,7 +15,7 @@ RECHT = ('<div class="hinweis"><strong>Hinweis:</strong> Die Angaben auf dieser 
 page("/", "Hausverwaltung Potsdam: WEG- und Mietverwaltung | Müller",
  "Hausverwaltung Müller GmbH: WEG-Verwaltung, Mietverwaltung und "
  "Sondereigentumsverwaltung für Eigentümergemeinschaften und Vermieter in Potsdam.",
- "Immobilienverwaltung für Eigentümergemeinschaften und Vermieter in Potsdam",
+ "Hausverwaltung in Potsdam für Eigentümer und Vermieter",
  "Die Hausverwaltung Müller GmbH verwaltet Wohnungseigentum und Mietobjekte in "
  "Potsdam und Brandenburg. Klare Zuständigkeiten, nachvollziehbare Finanzprozesse "
  "und geordnete Kommunikation.",
@@ -28,8 +28,6 @@ nachvollziehbar sein.</p>
 <p>Wir prüfen mit Ihnen zuerst die Ausgangslage und benennen, welche Informationen
 für ein belastbares Angebot erforderlich sind. Erst danach sprechen wir über
 Leistungsumfang und Vergütung.</p>
-
-{CTA_WEG}
 
 <h2>Unsere Leistungsbereiche</h2>
 <div class="cards">
@@ -75,7 +73,14 @@ strukturiert dar und bieten Mustervorlagen zum Herunterladen an.</p>
 <a href="/vorlagen/">Zu den Vorlagen</a></div>
 </div>
 {RECHT}
-""")
+""",
+ eyebrow="Potsdam und Brandenburg",
+ aktionen=[("Verwalterwechsel besprechen","/kontakt/?anliegen=weg",False),
+           ("Leistungen ansehen","/weg-verwaltung-potsdam/",True)],
+ schluss=("Sie möchten ein Angebot?",
+  "Nennen Sie uns Objekt, Einheitenzahl und Ihren gewünschten Übernahmezeitpunkt. "
+  "Wir sagen Ihnen, welche Unterlagen wir für ein belastbares Angebot benötigen.",
+  "Anfrage stellen","/kontakt/"))
 
 # ---------------------------------------------------------------- WEG-Verwaltung
 faq_weg = [
@@ -112,8 +117,6 @@ page("/weg-verwaltung-potsdam/",
 zügig, wenn die Verwaltung die Entscheidungen sauber vorbereitet. Dazu gehören eine
 eindeutige Tagesordnung, belastbare Zahlen, eingeholte Angebote und eine
 Dokumentation, die auch Jahre später nachvollziehbar ist.</p>
-
-{CTA_WEG}
 
 <h2>Leistungsbereiche in der WEG-Verwaltung</h2>
 <p>Der konkrete Umfang wird im Verwaltervertrag und in der Leistungsbeschreibung
@@ -170,5 +173,11 @@ Versicherungsfällen sowie zur bestehenden Bestellung und Vertragslage.</p>
 {RECHT}
 """,
  breadcrumb=[("/","Start"),("/weg-verwaltung-potsdam/","WEG-Verwaltung Potsdam")],
- faq=faq_weg)
+ faq=faq_weg, eyebrow="Leistung",
+ aktionen=[("Verwalterwechsel besprechen","/kontakt/?anliegen=weg",False),
+           ("Ablauf des Wechsels","/ratgeber/verwalterwechsel-weg/",True)],
+ schluss=("WEG-Verwaltung in Potsdam anfragen",
+  "Wir prüfen mit Ihrer Gemeinschaft die Ausgangslage und benennen, welche Angaben "
+  "für ein belastbares Angebot erforderlich sind.",
+  "Angebot anfragen","/kontakt/?anliegen=weg"))
 print("teil 1 ok")

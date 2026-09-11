@@ -82,7 +82,11 @@ Vorbereitung eines Beschlusses ohnehin sinnvoll.</p>
 """,
  breadcrumb=[("/","Start"),("/ratgeber/","Ratgeber"),
              ("/ratgeber/zertifizierter-verwalter/","Zertifizierter Verwalter")],
- faq=faq_z)
+ faq=faq_z, eyebrow="Ratgeber WEG-Recht",
+ schluss=("Verwaltung auswählen",
+  "Wir stellen Ihnen die Angaben zusammen, die Sie für den Vergleich mehrerer "
+  "Angebote in der Eigentümerversammlung benötigen.",
+  "Angebot anfragen","/kontakt/?anliegen=weg"))
 
 # ---------------------------------------------------------------- Vorlagen
 DL = """
@@ -142,5 +146,10 @@ Die Unterscheidung von Abberufung und Vertrag erläutert der Beitrag
 kündigen</a>.</p>
 {CTA_WEG}
 """,
- breadcrumb=[("/","Start"),("/vorlagen/","Vorlagen")])
+ breadcrumb=[("/","Start"),("/vorlagen/","Vorlagen")],
+ eyebrow="Kostenlose Downloads",
+ schluss=("Muster auf Ihre Gemeinschaft anpassen",
+  "Die Vorlagen sind Ausgangspunkte. Für die konkrete Beschlussfassung stimmen wir "
+  "Formulierung und Zeitplan mit Ihnen ab.",
+  "Kontakt aufnehmen","/kontakt/"))
 print("teil 5 ok")

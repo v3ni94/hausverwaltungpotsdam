@@ -35,7 +35,12 @@ Vollmacht als PDF bereit.</p>
 <p><a class="cta ghost" href="/vorlagen/">Zu den Vorlagen</a></p>
 {RECHT}
 """,
- breadcrumb=[("/","Start"),("/ratgeber/","Ratgeber")])
+ breadcrumb=[("/","Start"),("/ratgeber/","Ratgeber")],
+ eyebrow="Wissen",
+ schluss=("Fragen zu Ihrer Gemeinschaft?",
+  "Wenn sich Ihre Frage nicht allgemein beantworten lässt, sehen wir uns die konkrete "
+  "Beschluss- und Vertragslage gemeinsam an.",
+  "Kontakt aufnehmen","/kontakt/"))
 
 # ---------------------------------------------------------------- kündigen
 faq_k = [
@@ -128,5 +133,9 @@ dargestellt. Für die Dokumentation der Beschlüsse stellen wir ein
 """,
  breadcrumb=[("/","Start"),("/ratgeber/","Ratgeber"),
              ("/ratgeber/hausverwaltung-weg-kuendigen/","Hausverwaltung kündigen")],
- faq=faq_k)
+ faq=faq_k, eyebrow="Ratgeber WEG-Recht",
+ schluss=("Wechsel konkret vorbereiten",
+  "Wir sehen uns Bestellungsbeschluss, Vertrag und Zeitplan an und benennen die "
+  "Punkte, die vor der Versammlung geklärt sein sollten.",
+  "Verwalterwechsel besprechen","/kontakt/?anliegen=weg"))
 print("teil 3 ok")
