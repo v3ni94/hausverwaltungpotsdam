@@ -9,19 +9,26 @@ DOMAIN = "https://hausverwaltungpotsdam.de"
 
 FIRMA = "Hausverwaltung Müller GmbH"
 STRASSE, PLZORT = "Rheinpromenade 13", "40789 Monheim am Rhein"
-TEL, MAIL = "[Telefonnummer ergänzen]", "[E-Mail-Adresse ergänzen]"
+TEL = "030 439733333"
+TEL_LINK = "+4930439733333"
+MAIL = "potsdam@muellerhv.de"
+LEADMAIL = "lead@muellerhv.de"
 
 NAV = [("/", "Start"), ("/weg-verwaltung-potsdam/", "WEG-Verwaltung"),
        ("/mietverwaltung-potsdam/", "Mietverwaltung"),
        ("/sondereigentumsverwaltung-potsdam/", "Sondereigentum"),
-       ("/ratgeber/", "Ratgeber"), ("/vorlagen/", "Vorlagen"), ("/kontakt/", "Kontakt")]
+       ("/ratgeber/", "Ratgeber"), ("/vorlagen/", "Vorlagen")]
 
 ORG = {"@context":"https://schema.org","@type":"Organization",
   "@id":DOMAIN+"/#organization","name":FIRMA,"legalName":FIRMA,"url":DOMAIN+"/",
   "logo":DOMAIN+"/assets/logo-hvm.jpg",
   "address":{"@type":"PostalAddress","streetAddress":STRASSE,"postalCode":"40789",
              "addressLocality":"Monheim am Rhein","addressCountry":"DE"},
-  "areaServed":[{"@type":"City","name":"Potsdam"},{"@type":"State","name":"Brandenburg"}]}
+  "telephone":"+49 30 439733333","email":"potsdam@muellerhv.de",
+  "areaServed":[{"@type":"City","name":"Potsdam"},{"@type":"State","name":"Brandenburg"}],
+  "contactPoint":[{"@type":"ContactPoint","contactType":"customer service",
+    "telephone":"+49 30 439733333","email":"potsdam@muellerhv.de",
+    "areaServed":"DE","availableLanguage":"German"}]}
 
 def crumbs(items):
     return {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -63,7 +70,8 @@ def sektionen(body):
     return "\n".join(out)
 
 def page(path, title, desc, h1, lead, body, breadcrumb=None, faq=None,
-         extra_ld=None, eyebrow=None, aktionen=None, schluss=None):
+         extra_ld=None, eyebrow=None, aktionen=None, schluss=None, formular=False,
+         noindex=False):
     url = DOMAIN + path
     cur = ' aria-current="page"'
     nav = "\n".join(
@@ -82,6 +90,8 @@ def page(path, title, desc, h1, lead, body, breadcrumb=None, faq=None,
     ldtags = "\n".join('<script type="application/ld+json">%s</script>'
                        % json.dumps(l, ensure_ascii=False) for l in lds)
 
+    robots = '<meta name="robots" content="noindex, follow">' if noindex else ""
+    formular_js = '<script src="/assets/formular.js" defer></script>' if formular else ""
     eb = '<p class="eyebrow">%s</p>' % eyebrow if eyebrow else ""
     ld_html = '<p class="lead">%s</p>' % lead if lead else ""
     akt = ""
@@ -105,6 +115,7 @@ def page(path, title, desc, h1, lead, body, breadcrumb=None, faq=None,
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{url}">
+{robots}
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="stylesheet" href="/assets/style.css">
 <meta name="theme-color" content="#E6A83C">
@@ -124,7 +135,9 @@ def page(path, title, desc, h1, lead, body, breadcrumb=None, faq=None,
   aria-label="Menü öffnen"><span></span></button>
 <nav class="main" id="hauptmenue" aria-label="Hauptnavigation"><ul>
 {nav}
+<li class="nav-cta"><a href="/kontakt/">Angebot anfragen</a></li>
 </ul></nav>
+<a class="cta klein kopf-cta" href="/kontakt/">Angebot anfragen</a>
 </div></header>
 {crumb}
 <main>
@@ -162,7 +175,8 @@ in Potsdam und Brandenburg.</p>
 </ul></div>
 <div><h4>Kontakt</h4><ul>
 <li>{FIRMA}</li><li>{STRASSE}</li><li>{PLZORT}</li>
-<li>{TEL}</li><li>{MAIL}</li>
+<li><a href="tel:{TEL_LINK}">{TEL}</a></li>
+<li><a href="mailto:{MAIL}">{MAIL}</a></li>
 </ul></div>
 </div>
 <div class="legal">
@@ -171,6 +185,7 @@ in Potsdam und Brandenburg.</p>
 <a href="/datenschutz/">Datenschutz</a></div>
 </div>
 </div></footer>
+{formular_js}
 <script>
 (function(){{
   var b=document.querySelector('.navtoggle'), n=document.getElementById('hauptmenue'),

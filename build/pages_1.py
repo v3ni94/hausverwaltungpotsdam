@@ -2,9 +2,9 @@
 import sys; sys.path.insert(0,"/home/user/hausverwaltungpotsdam/build")
 from gen_site import *
 
-CTA_WEG = '<p><a class="cta" href="/kontakt/?anliegen=weg">Verwalterwechsel unverbindlich besprechen</a></p>'
-CTA_MIET = '<p><a class="cta" href="/kontakt/?anliegen=miete">Angebot für die Mietverwaltung anfragen</a></p>'
-CTA_SEV = '<p><a class="cta" href="/kontakt/?anliegen=sev">SEV-Verwaltung für Ihre Einheit anfragen</a></p>'
+CTA_WEG = '<p><a class="cta" href="/kontakt/?anliegen=weg">Angebot für Ihre WEG-Verwaltung anfragen</a></p>'
+CTA_MIET = '<p><a class="cta" href="/kontakt/?anliegen=miete">Angebot für Ihre Mietverwaltung anfragen</a></p>'
+CTA_SEV = '<p><a class="cta" href="/kontakt/?anliegen=sev">Angebot für Ihre Einheit anfragen</a></p>'
 RECHT = ('<div class="hinweis"><strong>Hinweis:</strong> Die Angaben auf dieser Seite '
  'sind eine allgemeine Information und keine Rechtsberatung. Der Stand der genannten '
  'Vorschriften ist vor einer Entscheidung zu prüfen. Bei streitigen oder '
@@ -75,12 +75,12 @@ strukturiert dar und bieten Mustervorlagen zum Herunterladen an.</p>
 {RECHT}
 """,
  eyebrow="Potsdam und Brandenburg",
- aktionen=[("Verwalterwechsel besprechen","/kontakt/?anliegen=weg",False),
+ aktionen=[("Angebot anfragen","/kontakt/",False),
            ("Leistungen ansehen","/weg-verwaltung-potsdam/",True)],
  schluss=("Sie möchten ein Angebot?",
   "Nennen Sie uns Objekt, Einheitenzahl und Ihren gewünschten Übernahmezeitpunkt. "
   "Wir sagen Ihnen, welche Unterlagen wir für ein belastbares Angebot benötigen.",
-  "Anfrage stellen","/kontakt/"))
+  "Angebot anfragen","/kontakt/"))
 
 # ---------------------------------------------------------------- WEG-Verwaltung
 faq_weg = [
@@ -174,7 +174,7 @@ Versicherungsfällen sowie zur bestehenden Bestellung und Vertragslage.</p>
 """,
  breadcrumb=[("/","Start"),("/weg-verwaltung-potsdam/","WEG-Verwaltung Potsdam")],
  faq=faq_weg, eyebrow="Leistung",
- aktionen=[("Verwalterwechsel besprechen","/kontakt/?anliegen=weg",False),
+ aktionen=[("Angebot anfragen","/kontakt/?anliegen=weg",False),
            ("Ablauf des Wechsels","/ratgeber/verwalterwechsel-weg/",True)],
  schluss=("WEG-Verwaltung in Potsdam anfragen",
   "Wir prüfen mit Ihrer Gemeinschaft die Ausgangslage und benennen, welche Angaben "

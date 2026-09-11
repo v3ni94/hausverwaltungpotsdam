@@ -130,12 +130,12 @@ nachfordern</td></tr>
  breadcrumb=[("/","Start"),("/ratgeber/","Ratgeber"),
              ("/ratgeber/verwalterwechsel-weg/","Verwalterwechsel")],
  faq=faq_w, eyebrow="Ratgeber WEG-Recht",
- aktionen=[("Wechsel besprechen","/kontakt/?anliegen=weg",False),
+ aktionen=[("Angebot anfragen","/kontakt/?anliegen=weg",False),
            ("Vorlagen herunterladen","/vorlagen/",True)],
  schluss=("Übergabe sauber aufsetzen",
   "Den größten Zeitverlust verursacht eine unvollständige Übergabe. Wir stimmen die "
   "Dokumentenliste und den Stichtag mit Ihnen ab.",
-  "Wechsel besprechen","/kontakt/?anliegen=weg"))
+  "Angebot anfragen","/kontakt/?anliegen=weg"))
 
 # ---------------------------------------------------------------- was darf
 faq_d = [
@@ -221,5 +221,5 @@ Angabe von Gegenstand, Betrag und Dauer. Ein
  schluss=("Kompetenzordnung festlegen",
   "Eine klare Beschlusslage zu Betragsgrenzen und Zustimmungserfordernissen entlastet "
   "Gemeinschaft und Verwaltung gleichermaßen.",
-  "Beratung anfragen","/kontakt/?anliegen=weg"))
+  "Angebot anfragen","/kontakt/?anliegen=weg"))
 print("teil 4 ok")

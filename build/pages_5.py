@@ -151,5 +151,5 @@ kündigen</a>.</p>
  schluss=("Muster auf Ihre Gemeinschaft anpassen",
   "Die Vorlagen sind Ausgangspunkte. Für die konkrete Beschlussfassung stimmen wir "
   "Formulierung und Zeitplan mit Ihnen ab.",
-  "Kontakt aufnehmen","/kontakt/"))
+  "Angebot anfragen","/kontakt/"))
 print("teil 5 ok")

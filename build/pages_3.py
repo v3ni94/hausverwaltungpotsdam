@@ -40,7 +40,7 @@ Vollmacht als PDF bereit.</p>
  schluss=("Fragen zu Ihrer Gemeinschaft?",
   "Wenn sich Ihre Frage nicht allgemein beantworten lässt, sehen wir uns die konkrete "
   "Beschluss- und Vertragslage gemeinsam an.",
-  "Kontakt aufnehmen","/kontakt/"))
+  "Angebot anfragen","/kontakt/"))
 
 # ---------------------------------------------------------------- kündigen
 faq_k = [
@@ -137,5 +137,5 @@ dargestellt. Für die Dokumentation der Beschlüsse stellen wir ein
  schluss=("Wechsel konkret vorbereiten",
   "Wir sehen uns Bestellungsbeschluss, Vertrag und Zeitplan an und benennen die "
   "Punkte, die vor der Versammlung geklärt sein sollten.",
-  "Verwalterwechsel besprechen","/kontakt/?anliegen=weg"))
+  "Angebot anfragen","/kontakt/?anliegen=weg"))
 print("teil 3 ok")

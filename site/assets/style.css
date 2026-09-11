@@ -26,6 +26,7 @@
 }
 
 *,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{
   margin:0;font-family:var(--sans);font-size:17px;line-height:1.68;
@@ -52,7 +53,8 @@ header.site{
   border-bottom:1px solid transparent;transition:border-color .2s, box-shadow .2s;
 }
 header.site.fixiert{border-bottom-color:var(--hellgrau);box-shadow:0 4px 20px rgba(26,26,26,.05)}
-.head{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:12px 0}
+.head{display:flex;align-items:center;justify-content:flex-end;gap:26px;padding:12px 0}
+.head .marke{margin-right:auto}
 .head .marke{display:flex;align-items:center;flex-shrink:0}
 .head img{width:132px;display:block}
 nav.main ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;align-items:center}
@@ -66,6 +68,9 @@ nav.main a::after{
 }
 nav.main a:hover::after,nav.main a[aria-current="page"]::after{right:0}
 nav.main a[aria-current="page"]{color:var(--schwarz)}
+.cta.klein{padding:11px 20px;font-size:14.5px}
+.kopf-cta{flex-shrink:0}
+.nav-cta{display:none}
 .navtoggle{
   display:none;background:none;border:1px solid var(--hellgrau);border-radius:var(--r);
   width:44px;height:40px;cursor:pointer;padding:0;align-items:center;justify-content:center;
@@ -254,6 +259,86 @@ form .check input{width:auto;margin-top:4px;accent-color:var(--orange)}
 a:focus-visible,button:focus-visible,.cta:focus-visible{
   outline:3px solid rgba(230,168,60,.6);outline-offset:3px}
 
+
+/* ---------------------------------------------------------------- Anfragestrecke */
+#anfrage{max-width:640px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#anfrage fieldset{border:0;padding:0;margin:0 0 8px}
+#anfrage legend{
+  font-size:1.14rem;font-weight:700;color:var(--schwarz);padding:0;margin:0 0 20px;
+  line-height:1.35;letter-spacing:-.2px;
+}
+#anfrage legend:focus{outline:none}
+.fortschritt{
+  display:flex;list-style:none;counter-reset:f;padding:0;margin:0 0 30px;gap:6px;
+  max-width:none;
+}
+.fortschritt li{
+  counter-increment:f;flex:1;font-size:12.5px;font-weight:600;color:var(--dezent);
+  padding-top:14px;border-top:3px solid var(--hellgrau);margin:0;letter-spacing:.2px;
+  transition:color .2s,border-color .2s;
+}
+.fortschritt li::before{content:counter(f) ". "}
+.fortschritt li.aktiv{color:var(--schwarz);border-top-color:var(--orange)}
+.fortschritt li.erledigt{color:var(--orange-d);border-top-color:var(--orange)}
+.fortschritt li.erledigt::before{content:"✓ "}
+.wahl{display:grid;gap:12px;margin-bottom:6px}
+.wahl label{
+  display:flex;gap:15px;align-items:flex-start;margin:0;font-weight:400;
+  border:1px solid var(--hellgrau);border-radius:var(--r);padding:18px 20px;
+  cursor:pointer;background:#fff;transition:border-color .16s,box-shadow .16s,background .16s;
+}
+.wahl label:hover{border-color:var(--orange);background:#FFFDF8}
+.wahl input{width:auto;margin:3px 0 0;accent-color:var(--orange);flex:0 0 auto}
+.wahl input:checked + span b{color:var(--orange-d)}
+.wahl label:has(input:checked){border-color:var(--orange);box-shadow:0 0 0 3px rgba(230,168,60,.14)}
+.wahl span{display:block;font-size:15px;color:var(--dezent);line-height:1.55}
+.wahl b{display:block;font-size:16.5px;color:var(--schwarz);font-weight:650;margin-bottom:3px}
+.zeile{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.zeile > div{min-width:0}
+.zeile label{margin-top:20px}
+.opt{font-weight:400;color:var(--dezent);font-size:13px}
+.pruefen{
+  display:grid;grid-template-columns:auto 1fr;gap:0;margin:0 0 6px;
+  border:1px solid var(--hellgrau);border-radius:var(--r);overflow:hidden;
+}
+.pruefen dt{
+  padding:11px 18px;font-size:14px;color:var(--dezent);background:var(--flaeche);
+  border-bottom:1px solid var(--umriss);white-space:nowrap;
+}
+.pruefen dd{
+  padding:11px 18px;margin:0;font-size:15.5px;color:var(--schwarz);font-weight:500;
+  border-bottom:1px solid var(--umriss);overflow-wrap:anywhere;
+}
+.pruefen dt:last-of-type,.pruefen dd:last-of-type{border-bottom:0}
+.navigation{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;align-items:center}
+.navigation .zurueck::after{content:none}
+.navigation .zurueck::before{content:"←";margin-right:2px}
+#anfrage:not(.mit-js) .weiter,#anfrage:not(.mit-js) .zurueck{display:none}
+#anfrage:not(.mit-js) fieldset{
+  border-top:1px solid var(--hellgrau);padding-top:26px;margin-bottom:26px}
+.fehlermeldung{
+  background:#FCF3E4;border:1px solid var(--orange);border-radius:var(--r);
+  color:#7A5310;padding:13px 17px;margin:24px 0 0;font-size:15px;font-weight:500;
+}
+.formhinweis{font-size:14.5px;color:var(--dezent);margin:18px 0 0}
+.meldung{
+  background:#FCF3E4;border:1px solid var(--orange);border-left-width:3px;
+  border-radius:var(--r);padding:18px 22px;margin:0 0 28px;font-size:15.5px;
+}
+.meldung strong{display:block;margin-bottom:4px}
+@media(max-width:640px){
+  .fortschritt li{font-size:0;padding-top:10px}
+  .fortschritt li::before{font-size:12.5px}
+  .fortschritt li.aktiv{font-size:12.5px;flex:2.4}
+  .zeile{grid-template-columns:1fr;gap:0}
+  .navigation{flex-direction:column-reverse;align-items:stretch}
+  .navigation .cta{justify-content:center}
+  .pruefen{grid-template-columns:1fr}
+  .pruefen dt{border-bottom:0;padding-bottom:0;background:#fff}
+  .pruefen dd{padding-top:3px}
+}
+
 /* Kontaktkacheln */
 .kontaktgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin:0}
 .kontaktgrid .card{padding:24px}
@@ -300,7 +385,10 @@ footer.site .claim{font-size:14px;color:#85868A;max-width:34ch}
   .fgrid{grid-template-columns:1fr 1fr;gap:32px}
 }
 @media(max-width:900px){
-  .navtoggle{display:flex}
+  .cta.klein{padding:11px 20px;font-size:14.5px}
+.kopf-cta{flex-shrink:0}
+.nav-cta{display:none}
+.navtoggle{display:flex}
   nav.main{
     position:absolute;left:0;right:0;top:100%;background:#fff;
     border-bottom:1px solid var(--hellgrau);box-shadow:var(--schatten);
@@ -314,6 +402,11 @@ footer.site .claim{font-size:14px;color:#85868A;max-width:34ch}
   nav.main a::after{display:none}
   nav.main a[aria-current="page"]{color:var(--orange-d)}
   header.site{position:relative}
+  .kopf-cta{display:none}
+  .nav-cta{display:block;border-bottom:0!important;margin-top:14px}
+  .nav-cta a{
+    background:var(--orange);color:#fff!important;text-align:center;font-weight:650;
+    border-radius:var(--r);padding:14px 20px!important}
 }
 @media(max-width:640px){
   body{font-size:16.5px}

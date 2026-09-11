@@ -37,6 +37,12 @@ Art. 28 DSGVO.</p>
 <h2>4. Kontaktaufnahme und Anfrageformular</h2>
 <p>Wenn Sie uns über das Formular, per E-Mail oder telefonisch kontaktieren,
 verarbeiten wir die von Ihnen mitgeteilten Daten zur Bearbeitung Ihrer Anfrage.</p>
+<p>Über das Anfrageformular erheben wir die Verwaltungsart, die Objektadresse mit
+Postleitzahl und Ort, die Anzahl der Einheiten, einen gewünschten Übernahmezeitpunkt,
+Ihren Namen, Ihre Funktion, Ihre E-Mail-Adresse, auf freiwilliger Basis Ihre
+Telefonnummer sowie den Text Ihres Anliegens. Die Angaben werden auf dem Server
+dieser Website verarbeitet und als E-Mail an unsere interne Anfrageadresse
+zugestellt. Eine Speicherung in einer Datenbank der Website findet nicht statt.</p>
 <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage auf den
 Abschluss oder die Durchführung eines Vertrags gerichtet ist, im Übrigen
 Art. 6 Abs. 1 lit. f DSGVO und, soweit eine Einwilligung erteilt wurde,
@@ -44,19 +50,26 @@ Art. 6 Abs. 1 lit. a DSGVO.</p>
 <p>Wir löschen die Daten, sobald sie für den Zweck nicht mehr erforderlich sind und
 keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
 
-<h2>5. Cookies und Reichweitenmessung</h2>
+<h2>5. Schutz vor automatisierten Eintragungen</h2>
+<p>Das Anfrageformular enthält ein für Sie nicht sichtbares Zusatzfeld. Wird dieses
+Feld ausgefüllt, gehen wir von einer automatisierten Eintragung aus und verarbeiten
+die Anfrage nicht weiter. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO, das
+berechtigte Interesse liegt in der Abwehr missbräuchlicher Eintragungen. Cookies
+werden hierfür nicht eingesetzt.</p>
+
+<h2>6. Cookies und Reichweitenmessung</h2>
 <p>Diese Website setzt keine Cookies zu Analyse- oder Marketingzwecken ein und bindet
 keine externen Schriftarten, Karten oder Analysedienste ein. Sofern künftig solche
 Dienste eingesetzt werden, ist diese Erklärung entsprechend zu ergänzen und
 gegebenenfalls eine Einwilligungslösung vorzusehen.</p>
 
-<h2>6. Empfänger</h2>
+<h2>7. Empfänger</h2>
 <p>Eine Weitergabe Ihrer Daten erfolgt nur, soweit dies zur Bearbeitung Ihres
 Anliegens erforderlich ist, Sie eingewilligt haben oder eine gesetzliche
 Verpflichtung besteht. Auftragsverarbeiter werden vertraglich nach Art. 28 DSGVO
 verpflichtet.</p>
 
-<h2>7. Ihre Rechte</h2>
+<h2>8. Ihre Rechte</h2>
 <p>Sie haben das Recht auf Auskunft nach Art. 15 DSGVO, auf Berichtigung nach
 Art. 16 DSGVO, auf Löschung nach Art. 17 DSGVO, auf Einschränkung der Verarbeitung
 nach Art. 18 DSGVO, auf Datenübertragbarkeit nach Art. 20 DSGVO sowie ein
@@ -66,12 +79,12 @@ jederzeit mit Wirkung für die Zukunft widerrufen.</p>
 beschweren. Zuständig ist in der Regel die Aufsichtsbehörde des Bundeslandes, in dem
 der Verantwortliche seinen Sitz hat.</p>
 
-<h2>8. Erforderlichkeit der Bereitstellung</h2>
+<h2>9. Erforderlichkeit der Bereitstellung</h2>
 <p>Die Bereitstellung Ihrer Daten ist weder gesetzlich noch vertraglich
 vorgeschrieben. Ohne die im Formular als erforderlich gekennzeichneten Angaben können
 wir Ihre Anfrage jedoch nicht bearbeiten.</p>
 
-<h2>9. Stand</h2>
+<h2>10. Stand</h2>
 <p>Stand dieser Erklärung: [Datum ergänzen]</p>
 """,
  breadcrumb=[("/","Start"),("/datenschutz/","Datenschutz")], eyebrow="Rechtliches")

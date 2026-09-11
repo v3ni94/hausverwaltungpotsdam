@@ -73,11 +73,12 @@ Rückständen oder Streitfällen.</p>
 """,
  breadcrumb=[("/","Start"),("/mietverwaltung-potsdam/","Mietverwaltung Potsdam")],
  faq=faq_miet, eyebrow="Leistung",
- aktionen=[("Angebot anfragen","/kontakt/?anliegen=miete",False)],
+ aktionen=[("Angebot anfragen","/kontakt/?anliegen=miete",False),
+           ("Leistungen ansehen","#leistungsbereiche-in-der-mietverwaltung",True)],
  schluss=("Mietverwaltung für Ihr Objekt",
   "Nennen Sie uns Lage, Größe, Einheitenzahl und bestehende Verträge. Auf dieser "
   "Grundlage stimmen wir den Leistungsumfang mit Ihnen ab.",
-  "Erstgespräch vereinbaren","/kontakt/?anliegen=miete"))
+  "Angebot anfragen","/kontakt/?anliegen=miete"))
 
 # ---------------------------------------------------------------- SEV
 faq_sev = [
@@ -147,10 +148,10 @@ möglichen Leistungsumfang.</p>
 """,
  breadcrumb=[("/","Start"),("/sondereigentumsverwaltung-potsdam/","Sondereigentumsverwaltung Potsdam")],
  faq=faq_sev, eyebrow="Leistung",
- aktionen=[("SEV anfragen","/kontakt/?anliegen=sev",False),
+ aktionen=[("Angebot anfragen","/kontakt/?anliegen=sev",False),
            ("Unterschied zur WEG-Verwaltung","#sev-und-weg-verwaltung-im-vergleich",True)],
  schluss=("Verwaltung für Ihre Einheit",
   "Teilen Sie uns Objekt, Lage, Größe und den aktuellen Mietstatus mit. Wir nennen "
   "Ihnen den möglichen Leistungsumfang.",
-  "Anfrage stellen","/kontakt/?anliegen=sev"))
+  "Angebot anfragen","/kontakt/?anliegen=sev"))
 print("teil 2 ok")
