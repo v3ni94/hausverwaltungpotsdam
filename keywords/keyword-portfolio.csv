@@ -1,0 +1,31 @@
+keyword;typ;intent;volumen_band_de;lokale_relevanz;prioritaet;ziel_url
+hausverwaltung potsdam;Short/Local;Transactional;200-1000;sehr hoch;A;/hausverwaltung-potsdam/
+weg verwaltung potsdam;Local;Transactional;50-200;sehr hoch;A;/weg-verwaltung-potsdam/
+mietverwaltung potsdam;Local;Transactional;50-200;sehr hoch;A;/mietverwaltung-potsdam/
+immobilienverwaltung potsdam;Local;Transactional;100-500;sehr hoch;A;/hausverwaltung-potsdam/
+sondereigentumsverwaltung potsdam;Longtail Local;Transactional;10-50;sehr hoch;A;/sondereigentumsverwaltung-potsdam/
+sev verwaltung potsdam;Longtail Local;Transactional;0-50;sehr hoch;B;/sondereigentumsverwaltung-potsdam/
+hausverwaltung wechseln;Short;Commercial;200-1000;hoch;A;/ratgeber/verwalterwechsel-weg/
+verwalterwechsel weg;Longtail;Informational/Commercial;100-500;hoch;A;/ratgeber/verwalterwechsel-weg/
+hausverwaltung kündigen weg;Longtail;Informational;100-500;hoch;A;/ratgeber/hausverwaltung-weg-kuendigen/
+weg verwalter kündigen;Longtail;Informational;50-200;hoch;A;/ratgeber/hausverwaltung-weg-kuendigen/
+verwalter abberufen weg;Longtail;Informational;100-500;hoch;A;/ratgeber/hausverwaltung-weg-kuendigen/
+neue hausverwaltung bestellen;Longtail;Informational;50-200;hoch;B;/ratgeber/verwalter-bestellen/
+hausverwaltung aufgaben;Short;Informational;500-2000;mittel;B;/ratgeber/aufgaben-hausverwaltung/
+was darf eine hausverwaltung;Question;Informational;200-1000;mittel;A;/ratgeber/was-darf-eine-hausverwaltung/
+pflichten hausverwaltung;Short;Informational;200-1000;mittel;B;/ratgeber/pflichten-hausverwaltung/
+zertifizierter verwalter;Short;Informational/Commercial;200-1000;hoch;A;/ratgeber/zertifizierter-verwalter/
+zertifizierter verwalter weg;Longtail;Informational;100-500;hoch;B;/ratgeber/zertifizierter-verwalter/
+hausverwalter kosten;Short;Commercial;500-2000;hoch;A;/ratgeber/hausverwaltung-kosten/
+weg verwaltung kosten;Longtail;Commercial;200-1000;sehr hoch;A;/weg-verwaltung-potsdam/kosten/
+mietverwaltung kosten;Longtail;Commercial;100-500;sehr hoch;A;/mietverwaltung-potsdam/kosten/
+sondereigentumsverwaltung kosten;Longtail;Commercial;50-200;sehr hoch;A;/sondereigentumsverwaltung-potsdam/kosten/
+eigentümerversammlung verwalterwechsel;Longtail;Informational;10-100;hoch;B;/ratgeber/verwalterwechsel-weg/
+beschluss verwalterwechsel muster;Longtail;Informational/Download;10-100;hoch;A;/vorlagen/verwalterwechsel-beschluss/
+bestellung hausverwaltung protokoll;Longtail;Informational/Download;10-100;hoch;A;/vorlagen/bestellung-hausverwaltung-protokoll/
+verwaltervertrag muster weg;Longtail;Informational/Download;50-200;hoch;A;/vorlagen/verwaltervertrag-weg/
+vollmacht hausverwaltung vorlage;Longtail;Informational/Download;50-200;hoch;A;/vorlagen/vollmacht-hausverwaltung/
+balkonkraftwerk weg beschluss;Longtail;Informational;200-1000;mittel;B;/ratgeber/balkonkraftwerk-weg/
+virtuelle eigentümerversammlung;Longtail;Informational;100-500;mittel;B;/ratgeber/virtuelle-eigentuemerversammlung/
+heizkostenverordnung fernablesung 2026;Longtail;Informational;10-200;hoch-saisonal;A;/ratgeber/heizkostenverordnung-2026/
+heizungsprüfung 2027 mehrfamilienhaus;Longtail;Informational;10-200;hoch-wachsend;B;/ratgeber/heizungspruefung-2027/

@@ -1,0 +1,19 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://hausverwaltungpotsdam.de/#organization",
+  "name": "Hausverwaltung Müller GmbH",
+  "legalName": "Hausverwaltung Müller GmbH",
+  "url": "https://hausverwaltungpotsdam.de/",
+  "logo": "[ERST NACH VERIFIZIERUNG EINFÜGEN]",
+  "email": "[VERIFIZIERTE E-MAIL]",
+  "telephone": "[VERIFIZIERTE TELEFONNUMMER]",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[STRASSE]",
+    "postalCode": "[PLZ]",
+    "addressLocality": "Potsdam",
+    "addressRegion": "Brandenburg",
+    "addressCountry": "DE"
+  }
+}
